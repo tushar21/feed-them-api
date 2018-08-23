@@ -1,5 +1,10 @@
 const Route = require('express').Router();
 const userRoutes = require('../modules/user/route');
+const todoRoutes = require('../modules/todos/route');
+const StateRoutes = require('../modules/state/route');
+const CityRoutes = require('../modules/city/route');
 Route.use('/user', userRoutes);
-
+Route.use('/todo', todoRoutes);
+Route.use('/state', StateRoutes);
+Route.use('/city', CityRoutes);
 module.exports = Route;

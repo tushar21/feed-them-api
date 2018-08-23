@@ -1,13 +1,13 @@
 const User =  require('../../models/user');
 
 module.exports.addPicker = function(req, res){
-    console.log(req.body, "request payload");
+    
     User.add(req.body)
     .then(function(userSaveResponse){
         console.log(userSaveResponse, "userSaveResponse");
         res.send(userSaveResponse);
     })
-    .catch(function(err){
+    .catch(function(err){ 
         console.error("Error in creating new picker", err);
         res.status(500).send(err);
     })
