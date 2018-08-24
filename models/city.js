@@ -33,5 +33,3 @@ function list(qry){
         })
     })    
 }
-
-
